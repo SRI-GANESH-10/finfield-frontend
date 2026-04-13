@@ -1,6 +1,6 @@
 import { APP } from "@/constants/app";
 
-const Logo = ({ className }: { className?: string }) => {
+const Logo = ({ className = "" }: { className?: string }) => {
     return (
         <div>
             <img src="/logo.svg" alt="logo" className={`w-12 h-12 ${className}`} />
