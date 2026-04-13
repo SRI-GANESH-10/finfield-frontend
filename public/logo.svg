@@ -1,0 +1,21 @@
+<svg width="72" height="72" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="globalIndigo" x1="0" y1="60" x2="0" y2="14" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#312E81"/>   <stop offset="50%" stop-color="#6366F1"/>  <stop offset="100%" stop-color="#C7D2FE"/> </linearGradient>
+  </defs>
+
+  <path
+    d="M14 20C14 16 18 14 22 14H50C54 14 58 16 58 20C58 24 54 26 50 26H26C22 26 20 28 18 30C16 32 14 30 14 27V20Z"
+    fill="url(#globalIndigo)"
+  />
+
+  <path
+    d="M14 34C14 30 18 28 22 28H42C46 28 50 30 50 34C50 38 46 40 42 40H26C22 40 20 42 18 44C16 46 14 44 14 41V34Z"
+    fill="url(#globalIndigo)"
+  />
+
+  <path
+    d="M14 48C14 44 18 42 22 42H34C38 42 42 44 42 48C42 52 38 54 34 54H26C22 54 20 56 18 58C16 60 14 58 14 55V48Z"
+    fill="url(#globalIndigo)"
+  />
+</svg>
