@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/tooltip";
 
 const menuItems = [
-  { name: "Dashboard", href: "/", icon: FiHome },
+  { name: "Dashboard", href: "/dashboard", icon: FiHome },
   { name: "Users", href: "/users", icon: FiUsers },
   { name: "Settings", href: "/settings", icon: FiSettings },
 ];

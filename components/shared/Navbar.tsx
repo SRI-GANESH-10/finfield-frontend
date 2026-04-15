@@ -1,7 +1,7 @@
 'use client'
 import { useUserStore } from "@/store/user.store";
 import { UserAvatar } from "./AvatarWithName";
-import { Logo, LogoWithName } from "./Logo"
+import { Logo } from "./Logo"
 
 const Navbar = () => {
     

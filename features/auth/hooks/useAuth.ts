@@ -10,6 +10,7 @@ export const useAuth = () => {
   const loading = useAuthStore((state)=>state.loading)
   const error = useAuthStore((state)=>state.error)
   let user = useUserStore((state)=> state.user);
+  const setUser = useUserStore((state)=> state.setUser)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -46,7 +47,7 @@ export const useAuth = () => {
   const handleLogin = async () =>{
     const res = await login(formDataLogin);
     if(res.user){
-      user = res?.user
+      setUser(res.user);
     }
   }
 

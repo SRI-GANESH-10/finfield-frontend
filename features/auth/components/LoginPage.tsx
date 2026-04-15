@@ -41,7 +41,7 @@ const LoginPage = () => {
 
         {error && <div>{error}</div>}
 
-        <Button onClick={handleLogin} className="w-full">Sign Up</Button>
+        <Button onClick={handleLogin} className="w-full">Login</Button>
       </div>
     </div>
   );
