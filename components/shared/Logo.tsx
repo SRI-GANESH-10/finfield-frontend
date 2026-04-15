@@ -11,7 +11,7 @@ const Logo = ({ className = "" }: { className?: string }) => {
 const LogoWithName = ({ className }: { className?: string }) => (
     <div className="flex items-center">
         <Logo className={className} />
-        <div className="font-semibold text-lg bg-linear-to-t from-indigo-600 to-indigo-300 bg-clip-text text-transparent">
+        <div className="font-semibold text-lg bg-linear-to-t from-primary to-primary/10 bg-clip-text text-transparent">
             {APP.APP_NAME}
         </div>    
     </div>
