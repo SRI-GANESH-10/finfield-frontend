@@ -1,9 +1,14 @@
 import { api } from '@/lib/axios';
-import { SignupPayload } from '../models';
+import { LoginPayload, SignupPayload } from '../models';
 
 export const authService = {
 
-    signUpApi : (data:SignupPayload) =>{
-        return api.post('/auth/signup' , data)
+    signUpApi: (data: SignupPayload) => {
+        return api.post('/auth/signup', data)
+    },
+
+    loginAPi: async (data: LoginPayload) => {
+        const res = await api.post('/auth/login', data);
+        return res.data;
     }
 };
