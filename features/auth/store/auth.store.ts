@@ -15,7 +15,7 @@ export const useAuthStore = create<AuthState>((set) => ({
       })
     } catch (error) {
       let message = "Something went wrong"
-      if(axios.isAxiosError(error)){
+      if (axios.isAxiosError(error)) {
         message = error.response?.data?.message
       }
       console.error('Signup failed:', error);
@@ -25,18 +25,18 @@ export const useAuthStore = create<AuthState>((set) => ({
 
   login: async (data: LoginPayload) => {
     try {
-      set({ loading: true , error:null})
-      const res:LoginResModel = await authService.loginAPi(data);
+      set({ loading: true, error: null })
+      const res: LoginResModel = await authService.loginAPi(data);
       set({
         loading: false,
         error: null
       })
-          useUserStore.getState().setUser(res.user);
+      useUserStore.getState().setUser(res.user);
 
       return res;
     } catch (error) {
       let message = "Something went wrong"
-      if(axios.isAxiosError(error)){
+      if (axios.isAxiosError(error)) {
         message = error.response?.data?.message ?? message
       }
       console.error('Login failed:', error);
