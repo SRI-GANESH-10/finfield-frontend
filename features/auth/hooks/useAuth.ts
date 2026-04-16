@@ -45,10 +45,7 @@ export const useAuth = () => {
   };
 
   const handleLogin = async () =>{
-    const res = await login(formDataLogin);
-    if(res.user){
-      setUser(res.user);
-    }
+    await login(formDataLogin);
   }
 
   return {
