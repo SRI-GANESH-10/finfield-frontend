@@ -10,6 +10,7 @@ type UserAvatarProps = {
   src?: string;
   size?: "default" | "sm" | "lg";
   className?: string;
+  onClick?: () => void;
 };
 
 function getInitials(name: string) {
@@ -35,9 +36,10 @@ export function UserAvatar({
   src,
   size = "default",
   className,
+  onClick,
 }: UserAvatarProps) {
   return (
-    <Avatar size={size} className={className}>
+    <Avatar size={size} className={className} onClick={onClick}>
       {src && <AvatarImage src={src} alt={name} />}
       <AvatarFallback className="bg-primary/10 text-primary">
         {getInitials(name)}

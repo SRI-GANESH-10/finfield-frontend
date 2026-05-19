@@ -14,7 +14,7 @@ const LoginPage = () => {
 
   useEffect(()=>{   
     if(user){
-        router.replace('/dashboard')
+        router.replace('/product/dashboard')
     }
   }, [user])
 
