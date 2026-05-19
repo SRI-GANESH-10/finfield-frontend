@@ -7,7 +7,7 @@ const Navbar = () => {
     
     const user = useUserStore((state)=>state.user)
     return (
-        <div className="bg-white border-b flex justify-between items-center px-4">
+        <div className="h-14 shrink-0 bg-white border-b flex justify-between items-center px-4">
             <Logo />
             <UserAvatar name={user?.name || "Test Na"}/>
         </div>
