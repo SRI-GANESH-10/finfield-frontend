@@ -126,7 +126,7 @@ export * from './models';
     # -----------------------
     # APP ROUTE (routes group)
     # -----------------------
-    route_root = os.path.join(base, "app", "(routes)", feature_name)
+    route_root = os.path.join(base, "app", "(routes)", "product", feature_name)
     ensure_dir(route_root)
 
     page_file = os.path.join(route_root, "page.tsx")

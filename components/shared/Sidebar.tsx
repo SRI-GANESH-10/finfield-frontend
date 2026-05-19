@@ -32,7 +32,7 @@ const Sidebar = () => {
               <Tooltip key={item.name}>
                 <TooltipTrigger asChild>
                   <Link
-                    href={item.href}
+                    href={`/product/${item.href}`}
                     className={`p-3 rounded-lg transition flex items-center justify-center
                     ${
                       isActive
