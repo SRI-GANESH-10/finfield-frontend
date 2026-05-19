@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ThumbsUp, MessageCircle, Share2, MoreHorizontal } from "lucide-react";
 
 import { Post } from "@/features/feed";
@@ -16,8 +17,11 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
 function getInitials(name: string) {
+  if (!name?.trim()) return "?";
   return name
-    .split(" ")
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean)
     .map((n) => n[0])
     .join("")
     .toUpperCase()
@@ -67,11 +71,13 @@ export const FeedCard = ({ posts }: { posts: Post }) => {
           {posts.description}
         </p>
         {posts.image && (
-          <div className="overflow-hidden rounded-lg ring-1 ring-border">
-            <img
+          <div className="relative overflow-hidden rounded-lg ring-1 ring-border h-72">
+            <Image
               src={posts.image}
-              alt="Post image"
-              className="w-full max-h-80 object-cover"
+              alt={`Photo shared by ${posts.authorName}`}
+              fill
+              className="object-cover"
+              sizes="(max-width: 672px) 100vw, 672px"
             />
           </div>
         )}

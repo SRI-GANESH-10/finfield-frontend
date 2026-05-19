@@ -36,7 +36,7 @@ const Sidebar = () => {
   const pathname = usePathname();
 
   const NavLink = ({ item }: { item: NavItem }) => {
-    const isActive = pathname.startsWith(item.href);
+    const isActive = pathname === item.href || pathname.startsWith(item.href + "/");
     const Icon = item.icon;
 
     const link = (
